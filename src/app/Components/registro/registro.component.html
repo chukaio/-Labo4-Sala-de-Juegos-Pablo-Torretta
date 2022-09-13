@@ -7,7 +7,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <input type="text" class="input" id="emailLogin" type="text" required>
+                <input type="text" class="input" id="emailRegistration" type="text" required>
             </div>
         </div>
         <div class="row">
@@ -17,27 +17,27 @@
         </div>
         <div class="row">
             <div class="col">
-                <input type="text" class="input" id="passwordLogin" type="password" required>
+                <input type="text" class="input" id="passwordRegistration" type="password" required>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <button class="btnSignIn" (click)="logIn()" type="submit">
-                    Login
+                <button class="btnSignUp" (click)="signUp()" type="submit">
+                    Sign Up
                 </button>
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <label class="label">
-                    ¿No posee una cuenta?
+                    ¿Ya esta registrado?
                 </label>
             </div>
         </div>
         <div class="row">
             <div class="col colLblSignUp">            
-                <button class="btnSignUp label" [routerLink]="['/registro']">
-                    <u>Sign Up</u>
+                <button class="btnLogin label" [routerLink]="['/login']">
+                    <u>Login</u>
                 </button>
             </div>
         </div>

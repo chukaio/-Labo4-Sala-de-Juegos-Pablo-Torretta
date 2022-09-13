@@ -1,0 +1,22 @@
+.imgIcon{
+    width:80px;
+}
+
+.btnLogin{
+    background-color: #38f808; 
+    color: #000000;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.btnSignUp{
+    background-color: #9300a0;
+    color: #000000;
+    font-weight: bold;
+}
+
+.btnSignOut{
+    background-color: #ff7300;
+    color: #000000;
+    font-weight: bold;
+}

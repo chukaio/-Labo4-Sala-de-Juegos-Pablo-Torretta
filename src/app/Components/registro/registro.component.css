@@ -52,7 +52,7 @@
     color: #000000;
 }
 
-.btnSignUp {
+.btnLogin {
     background-color: transparent;
     border: none;
     color: #0a0404;
@@ -67,8 +67,8 @@
     text-align: center;
 }
 
-.btnSignIn {
-    background: #51f803;
+.btnSignUp {
+    background: #9300a0;
     color: #000000;
     font-weight: bold;
 }
