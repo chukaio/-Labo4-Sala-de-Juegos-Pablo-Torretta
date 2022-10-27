@@ -1,0 +1,142 @@
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(1000px);
+        opacity: 0
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+.userContainer {
+    border: solid black;
+    width: 350px;
+    position: fixed;
+    margin-left: -765px;
+    margin-top: -250px;
+    background-color: blueviolet;
+    animation: slide-in-right 1s cubic-bezier(.25, .46, .45, .94) both;
+}
+
+.lblName {
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: rgb(82, 255, 2);
+    margin-left: 8%;
+}
+
+.imgUser {
+    width: 200px;
+    margin-left: 20%;
+}
+
+.lblDescription {
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: aqua;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 10%;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+.gamesContainer {
+    border: solid black;
+    position: fixed;
+    width: 1100px;
+    margin-top: -250px;
+    margin-left: -365px;
+    background-color: rgb(146, 5, 5);
+    animation: slide-in-left 1s cubic-bezier(.25, .46, .45, .94) .5s both;
+}
+
+.lblGames {
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: rgb(251, 255, 2);
+    margin-left: 40%;
+}
+
+.lblHangedUp {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: rgb(2, 255, 255);
+    margin-left: 1%;
+}
+
+.lblHangedUpDesc {
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: rgb(156, 156, 156);
+    margin-left: 1%;
+}
+
+.lblHigherLower {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: rgb(2, 255, 255);
+    margin-left: 1%;
+    margin-top: 2%;
+}
+
+.lblHigherLowerDesc {
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: rgb(156, 156, 156);
+    margin-left: 1%;
+}
+
+.lblAsked {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: rgb(2, 255, 255);
+    margin-left: 1%;
+    margin-top: 2%;
+}
+
+.lblAskedDesc {
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: rgb(156, 156, 156);
+    margin-left: 1%;
+}
+
+.lblGuessWho {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: rgb(2, 255, 255);
+    margin-left: 1%;
+    margin-top: 2%;
+}
+
+.lblGuessWhoDesc {
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: rgb(156, 156, 156);
+    margin-left: 1%;
+}

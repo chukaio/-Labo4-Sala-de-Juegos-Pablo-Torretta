@@ -1,0 +1,101 @@
+.gridContainer {
+    border: solid rgb(0, 0, 0);
+    width: 450px;
+    height: 600px;
+    margin-top: 20%;
+    margin-left: 0px;
+    background-color: aqua;
+    opacity: 0.7;
+}
+
+.font {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 1px 0 0 rgb(0, 0, 0), -1px 0 0 rgb(0, 0, 0), 0 1px 0 rgb(0, 0, 0), 0 -1px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
+}
+
+.lblScore {
+    font-size: 25px;
+    color: blueviolet;
+    margin-left: 2%;
+}
+
+.imgTf {
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-bottom: 5%;
+    height: 300px;
+}
+
+.imgFirstHint{
+    opacity: 0.1;
+}
+
+.lblQuestion {
+    font-size: 20px;
+    color: yellow;
+    margin-bottom: 5%;
+    margin-left: 23%;
+}
+
+.inputAnswer{
+    margin-left: 40%;
+    border: solid black;
+    height: 40px;
+}
+
+.btnSend{
+    background-color: rgb(172, 8, 248);
+    color:black;
+    font-weight: bold;
+    margin-left: 40%;
+    height: 40px;
+}
+
+.btnShowHint{
+    background-color: transparent;
+    border: none;
+    margin-top: 15%;
+}
+
+.iconHint{
+    width: 50px;
+    margin-top: 20%;
+    margin-left: -30%;
+}
+
+.inputHint{
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: -70%;
+    margin-top: 25%;
+}
+
+.gridContainerLost{
+    border: solid rgb(0, 0, 0);
+    width: 200px;
+    height: 200px;
+    margin-top: 20%;
+    margin-left: 0px;
+    background-color: aqua;
+    opacity: 0.6;
+}
+
+.lblLost{
+    font-size: 25px;
+    color: blueviolet;
+    margin-left: 17%;
+}
+
+.btnReset{
+    background-color: transparent;
+    border: none;
+    margin-left: 20%;
+    margin-top: 20%;
+}
+
+.imgReset{
+    width: 100px;
+}

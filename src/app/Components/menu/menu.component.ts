@@ -12,7 +12,7 @@ export class MenuComponent implements OnInit {
   isLogged: boolean;
   
   constructor(
-    private _authService: AuthenticationService,
+    public _authService: AuthenticationService,
     private _router: Router,
     private _toastr: ToastrService
   ) {

@@ -1,0 +1,39 @@
+<div *ngIf="_authService.isLogged && !_authService.openChat" class="iconChatContainer">
+    <button type="button" class="btnChat" (click)="_authService.openChat=true">
+        <img src="assets/Icon/IconChat.png" class="imgIcon">
+    </button>
+</div>
+
+<div *ngIf="_authService.openChat" class="ChatContainer crt">
+    <div class="backGroundImgChatContainer">
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btnCloseChat" (click)="_authService.openChat=false">
+                    <img src="assets/Icon/IconCloseChat.png" class="imgIconClose">
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card" id="cardChat">
+                <p *ngFor="let message of chatMessages" [ngClass]="(message.user==_authService.user)? 'sentMessage':'receivedMessage'">
+                    <span class="userMessage">{{message.user}}</span><br>
+                    <span class="textMessage">{{message.text}}</span><br>
+                    <span class="timeMessage">{{message.createdAt | date: 'dd MMM hh:mm'}}</span><br>
+                </p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="input" id="message" placeholder="Escribe algo..." required [(ngModel)]="inputMessage">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btnSendMessage" (click)="sendMessage()">
+                    <img src="assets/Icon/IconSend.png" class="imgIconSend">
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>

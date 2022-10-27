@@ -1,0 +1,147 @@
+.gameBoardContainer {
+    border: solid black;
+    width: 700px;
+    height: 600px;
+    position: fixed;
+    top: 120px;
+    left: 450px;
+    background-color: rgb(89, 187, 243);
+    opacity: 0.8;
+}
+
+.lblGame{
+    font-size: 50px;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    position: fixed;
+    top: 110px;
+    left: 635px
+}
+
+.lblLeft {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    position: fixed;
+    top: 180px;
+    left: 585px
+}
+
+.lblRight {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    position: fixed;
+    top: 180px;
+    left: 860px
+}
+
+.cardLeft {
+    width: 200px;
+    height: 300px;
+    position: fixed;
+    top: 250px;
+    left: 550px;
+}
+
+.lblCardLeft {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f8fc07;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    position: fixed;
+    top: 260px;
+    left: 600px
+}
+
+.imgCardLeft {
+    width: 120px;
+    height: 150px;
+    position: fixed;
+    top: 295px;
+    left: 590px;
+}
+
+.cardRight {
+    width: 230px;
+    height: 300px;
+    position: fixed;
+    top: 250px;
+    left: 835px;
+}
+
+.lblCardRight {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f8fc07;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    position: fixed;
+    top: 260px;
+    left: 893px
+}
+
+.imgCardRight {
+    width: 145px;
+    height: 150px;
+    position: fixed;
+    top: 295px;
+    left: 878px;
+}
+
+.cardRightBack{
+    width: 215px;
+    height: 289px;
+    position: fixed;
+    top: 255px;
+    left: 843px;
+}
+
+.btnLower {
+    color: #a70ece;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 80px;
+    background-color: transparent;
+    border: none;   
+    position: fixed;
+    top: 530px;
+    left: 850px;
+}
+
+.btnHigher {
+    color: #e40d0d;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 80px;
+    background-color: transparent;
+    border: none;   
+    position: fixed;
+    top: 530px;
+    left: 990px;
+}
+
+.btnNext{
+    color: #f8fc07;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 80px;
+    background-color: transparent;
+    border: none;   
+    position: fixed;
+    top: 600px;
+    left: 775px;
+}
+
+.imgNext{
+    width: 40px;
+}
+
+.lblScore{
+    font-size: 40px;
+    font-weight: bold;
+    color: #00ff22;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    position: fixed;
+    top: 650px;
+    left: 470px
+}

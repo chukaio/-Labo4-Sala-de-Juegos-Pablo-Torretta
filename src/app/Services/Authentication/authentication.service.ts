@@ -15,8 +15,10 @@ const auth = getAuth(app);
 })
 export class AuthenticationService {
 
-  private isLogged: boolean;
+  public isLogged: boolean;
+  public openChat: boolean;
   private isLogged$: Subject<boolean>;
+  public user: string;
 
   constructor(
     private catchErrorFB: FirebaseCatchErrorService,
@@ -24,10 +26,13 @@ export class AuthenticationService {
     private _router: Router
   ) {
     this.isLogged = false;
+    this.openChat = false;
     this.isLogged$ = new Subject();
+    this.user = "";
   }
 
   getIsLogged() {
+    console.log("Estado de usuario: " + this.isLogged);
     return this.isLogged$.asObservable();
   }
 
@@ -37,6 +42,7 @@ export class AuthenticationService {
       const user = userCredentials.user;
       if (user) {
         this.isLogged = true;
+        this.user = user.email;
         this.isLogged$.next(this.isLogged);
         this._router.navigate(['home']);
       } else {
@@ -50,6 +56,8 @@ export class AuthenticationService {
 
   signOut() {
     this.isLogged = false;
+    this.openChat = false;
+    this.user = "";
     this.isLogged$.next(this.isLogged);
 
     return signOut(auth);

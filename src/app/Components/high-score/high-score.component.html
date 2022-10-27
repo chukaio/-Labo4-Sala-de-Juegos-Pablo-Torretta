@@ -1,0 +1,13 @@
+<div *ngFor="let element of scores">
+    <div class="row">
+        <div class="col-6">
+            <label class="lblScoring lblSU" position="floating">{{element.user}}</label>
+        </div>
+        <div class="col-3">
+            <label class="lblScoring" position="floating">{{element.score | score }}</label>
+        </div>
+        <div class="col-3">
+            <label class="lblScoring" position="floating">{{element.date | mydatePipe }}</label>
+        </div>
+    </div>
+</div>

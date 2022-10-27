@@ -1,1 +1,85 @@
-<p>juegos works!</p>
+<br>
+<br>
+<br>
+<br>
+
+<head>
+</head>
+<!-- <router-outlet></router-outlet> -->
+
+<body>
+    <label class="lblGames" position="floating">Juegos</label>
+    <div class="gamesBackground">
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btnHangman" [disabled]="disableGameA" (click)="openScoreCard(1)">
+                    <img src="assets/Icon/ahorcado.png" class="imgIconHangman">
+                </button>
+            </div>            
+        </div>
+        <div class="row">
+            <label class="lblHangman" position="floating">Ahorcado</label>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btnHigherLess" [disabled]="disableGameB" (click)="openScoreCard(2)">
+                    <img src="assets/Icon/mayor-menor.png" class="imgIconHigherLess">
+                </button>
+            </div>            
+        </div>
+        <div class="row">
+            <label class="lblHigherLess" position="floating">Mayor-Menor</label>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btnAsked" [disabled]="disableGameC" (click)="openScoreCard(3)">
+                    <img src="assets/Icon/preguntados.png" class="imgIconAsked">
+                </button>
+            </div>            
+        </div>
+        <div class="row">
+            <label class="lblAsked" position="floating">Preguntados</label>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btnGuessWho" [disabled]="disableGameD" (click)="openScoreCard(4)">
+                    <img src="assets/Icon/adivina-quien.png" class="imgIconGuessWho">
+                </button>
+            </div>            
+        </div>
+        <div class="row">
+            <label class="lblGuessWho" position="floating">Adivina quien</label>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div *ngIf="openScore" class="cardGameContainer">
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="btnCloseChat" (click)="exitScores()">
+                                <img src="assets/Icon/IconCloseChat.png" class="imgIconClose">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label class="label" position="floating">Highscores</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <!-- Puntaje -->
+                            <app-high-score [collectionName]="collectionNameParent"></app-high-score>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="btnLaunchGame" (click)="launchGame()">
+                                Jugar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

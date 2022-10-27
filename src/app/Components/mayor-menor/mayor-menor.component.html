@@ -1,0 +1,56 @@
+<div class="gameBoardContainer">
+    <label class="lblGame" position="floating">Mayor-Menor</label>
+    <div class="row">
+        <div class="col">
+            <label class="lblLeft" position="floating">Actual</label>
+        </div>
+        <div class="col">
+            <label class="lblRight" position="floating">Siguiente</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img class="cardLeft" id="cardLeft" src="assets/Games/Higher-Lower/Front.png">
+            <label class="lblCardLeft" position="floating">{{lblCardLeft}}</label>
+            <img class="imgCardLeft" id="imgCardLeft" src={{imgCardLeft}}>
+        </div>
+        <div class="col" *ngIf="!drawCard; then thenCard else elseCard">
+        </div>
+        <ng-template #thenCard>
+            <img class="cardRightBack" id="cardRight" src="assets/Games/Higher-Lower/Back.jpg">
+        </ng-template>
+        <ng-template #elseCard>
+            <img class="cardRight" id="cardRight" src="assets/Games/Higher-Lower/Front.png">
+            <label class="lblCardRight" position="floating">{{lblCardRight}}</label>
+            <img class="imgCardRight" id="imgCardRight" src={{imgCardRight}}>
+        </ng-template>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button type="button" class="btnLower" (click)="guessCard('<')" id="btnLeft" *ngIf="!gameOver && !guessedRight">
+                < </button>
+        </div>
+        <div class="col">
+            <button type="button" class="btnHigher" (click)="guessCard('>')" id="btnRight" *ngIf="!gameOver && !guessedRight">
+                >
+            </button>
+        </div>
+        <div class="col">
+            <div *ngIf="!gameOver; then thenImg else elseImg">
+            </div>
+            <ng-template #thenImg>
+                <button type="button" class="btnNext" (click)="nextCard()">
+                    <img class="imgNext" src="assets/Games/Higher-Lower/Next.png">
+                </button>
+            </ng-template>
+            <ng-template #elseImg>
+                <button type="button" class="btnNext" (click)="resetGame()">
+                    <img class="imgNext" src="assets/Games/Higher-Lower/Reset.png">
+                </button>
+            </ng-template>
+        </div>
+        <div class="col">
+            <label class="lblScore" position="floating">Aciertos: {{score}}</label>
+        </div>
+    </div>
+</div>

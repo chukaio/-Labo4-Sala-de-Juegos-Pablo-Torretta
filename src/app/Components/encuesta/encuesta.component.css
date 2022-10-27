@@ -1,0 +1,253 @@
+.gridContainer {
+    border: solid rgb(2, 2, 2);
+    background-color: aqua;
+    position: fixed;
+    top: 120px;
+    left: 35%;
+    opacity: 0.75;
+}
+
+.font {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(136, 62, 136);
+    text-shadow: 1px 0 0 rgb(0, 0, 0), -1px 0 0 rgb(0, 0, 0), 0 1px 0 rgb(0, 0, 0), 0 -1px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
+}
+
+@keyframes vibrate-3 {
+    0% {
+        transform: translate(0)
+    }
+
+    10% {
+        transform: translate(-2px, -2px)
+    }
+
+    20% {
+        transform: translate(2px, -2px)
+    }
+
+    30% {
+        transform: translate(-2px, 2px)
+    }
+
+    40% {
+        transform: translate(2px, 2px)
+    }
+
+    50% {
+        transform: translate(-2px, -2px)
+    }
+
+    60% {
+        transform: translate(2px, -2px)
+    }
+
+    70% {
+        transform: translate(-2px, 2px)
+    }
+
+    80% {
+        transform: translate(-2px, -2px)
+    }
+
+    90% {
+        transform: translate(2px, -2px)
+    }
+
+    100% {
+        transform: translate(0)
+    }
+}
+
+.invalid {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 0 0 rgb(0, 0, 0), -1px 0 0 rgb(0, 0, 0), 0 1px 0 rgb(0, 0, 0), 0 -1px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);    
+}
+
+.invalidNameRequired {
+    position: fixed;
+    margin-top: -215px;
+    margin-left: 250px;
+    animation: vibrate-3 .5s linear infinite both;
+}
+
+.invalidLastNameRequired {
+    position: fixed;
+    margin-top: -138px;
+    margin-left: 250px;
+    animation: vibrate-3 .5s linear infinite both;
+}
+
+.invalidAgeRequired {
+    position: fixed;
+    margin-top: -60px;
+    margin-left: 250px;
+    animation: vibrate-3 .5s linear infinite both;
+}
+
+.invalidAgeFormat {
+    position: fixed;
+    margin-top: -60px;
+    margin-left: 250px;
+    animation: vibrate-3 .5s linear infinite both;
+}
+
+.invalidPhoneRequired {
+    position: fixed;
+    margin-top: 18px;
+    margin-left: 250px;
+    animation: vibrate-3 .5s linear infinite both;
+}
+
+.invalidPhoneFormat {
+    position: fixed;
+    margin-top: 18px;
+    margin-left: 250px;
+    animation: vibrate-3 .5s linear infinite both;
+}
+
+.invalidFactionRequired {
+    position: fixed;
+    margin-top: 92px;
+    margin-left: 250px;
+    animation: vibrate-3 .5s linear infinite both;
+}
+
+.invalidGamesRequired {
+    position: fixed;
+    margin-top: 165px;
+    margin-left: 250px;
+    animation: vibrate-3 .5s linear infinite both;
+}
+
+.invalidCommentRequired {
+    position: fixed;
+    margin-top: 250px;
+    margin-left: 250px;
+    animation: vibrate-3 .5s linear infinite both;
+}
+
+.lblName {
+    margin-left: 10px;
+}
+
+.inputName {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    width: 455px;
+}
+
+.lblLastName {
+    margin-left: 10px;
+}
+
+.inputLastName {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    width: 455px;
+}
+
+.lblAge {
+    margin-left: 10px;
+}
+
+.inputAge {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    width: 455px;
+}
+
+.lblPhone {
+    margin-left: 10px;
+}
+
+.inputPhone {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    width: 455px;
+}
+
+.lblFaction {
+    margin-left: 10px;
+}
+
+.slcFaction {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    width: 455px;
+}
+
+.lblGames {
+    margin-left: 10px;
+}
+
+.checksContainer {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.lblGameA {
+    font-weight: bold;
+}
+
+.ckbGameA {
+    margin-left: 10px;
+}
+
+.lblGameB {
+    font-weight: bold;
+}
+
+.ckbGameB {
+    margin-left: 8px;
+}
+
+.lblGameC {
+    font-weight: bold;
+}
+
+.ckbGameC {
+    margin-left: 8px;
+}
+
+.ckbGameD {
+    margin-left: 8px;
+}
+
+.lblGameD {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.lblComment {
+    margin-left: 10px;
+}
+
+.txtComment {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    width: 455px;
+}
+
+.btnSend {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100px;
+    margin-left: 180px;
+}

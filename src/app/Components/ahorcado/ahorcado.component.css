@@ -1,0 +1,113 @@
+.lblGame {   
+    color: black;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+    font-weight: bold;
+    font-size: 40px;
+    position: fixed;
+    top: 130px;
+    left: 800px;
+}
+
+.imgContainer {
+    position: fixed;
+    left: 5px;
+    top: 200px;
+}
+
+.imgHangman {
+    height: 500px;
+}
+
+.lblUnderlineWord {
+    font-weight: bold;
+    font-size: 120px;
+    position: fixed;
+    top: 300px;
+    left: 400px;
+    color: black;
+}
+
+.keyBoardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 99999;
+    position: fixed;
+    left: 550px;
+    bottom: 50px;
+    border: solid black;
+    padding-top: 25px;
+    padding-bottom: 25px;    
+    width: 650px;
+}
+
+.btnKeyUnPressed {
+    background-color: #05b0ff;
+    color: #000000;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    width: 42px;
+    height: 42px;
+    border-radius: 10%;
+}
+
+.btnKeyPressed {
+    background-color: #a0a0a0;
+    color: #000000;
+    font-weight: bold;
+    margin-left: 5px;
+    width: 42px;
+    height: 42px;
+    border-radius: 10%;
+}
+
+.btnResetGame{
+    z-index: 99999;
+    background-color: #e40d0d;
+    color: #000000;
+    font-weight: bold;
+    font-size: 30px;
+    width: 200px;
+    height: 100px;
+    margin-right: 20px;
+    position: fixed;
+    left: 650px;
+    border-radius: 10%;
+}
+
+.btnNextGame{
+    z-index: 99999;
+    background-color: #f8fc07;
+    color: #000000;
+    font-weight: bold;
+    font-size: 30px;
+    width: 200px;
+    height: 100px;
+    margin-right: 20px;
+    position: fixed;
+    left: 650px;
+    border-radius: 10%;
+}
+
+.btnReturnHome{
+    z-index: 99999;
+    background-color: #5e126d;
+    color: #000000;
+    font-weight: bold;
+    font-size: 30px;
+    width: 200px;
+    height: 100px;
+    position: fixed;
+    left: 900px;
+    border-radius: 10%;
+}
+
+.lblScore{
+    font-size: 40px;
+    font-weight: bold;
+    color: #00ff22;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    position: fixed;
+    top: 650px;
+    left: 1300px
+}

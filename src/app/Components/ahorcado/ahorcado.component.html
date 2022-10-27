@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col">
+        <label class="lblGame" position="floating">Ahorcado</label>
+    </div>
+</div>
+<div class="row">
+    <div class="imgContainer">
+        <img id="imgHangmanGame" src="assets/Games/Hangman/0.png" class="imgHangman">
+    </div>
+    <div *ngIf="!wonGame && !lostGame" class="underlineWordContainer">
+        <label class="lblUnderlineWord" position="floating">{{hiddenWord}}</label>
+    </div>
+</div>
+<div class="row">
+    <div *ngIf="!wonGame && !lostGame; then keyBoard; else elseButtons;"></div>
+    <ng-template #keyBoard>
+        <div class="keyBoardContainer">
+            <button type="button" id={{letter}} *ngFor="let letter of keys" (click)="keyPressed(letter)"
+                class="btnKeyUnPressed">
+                {{letter}}
+            </button>
+        </div>
+    </ng-template>
+    <ng-template #elseButtons>
+        <button *ngIf="lostGame" type="button" (click)="resetGame()" class="btnResetGame">
+            Volver a Jugar
+        </button>
+        <button *ngIf="wonGame" type="button" (click)="nextGame()" class="btnNextGame">
+            Volver a Jugar
+        </button>
+        <button type="button" routerLink="../home" class="btnReturnHome">
+            Home
+        </button>
+    </ng-template>
+    <div class="col">
+        <label class="lblScore" position="floating">Aciertos: {{score}}</label>
+    </div>
+</div>

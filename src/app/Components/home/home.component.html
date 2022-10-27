@@ -7,17 +7,35 @@
 </head>
 
 <body>
-    <div class="titleHome">
-        <h1>Bienvenidos a la sala de juegos!</h1>
-    </div>
-    <div class="listHome">
-        <ul>
-            <li>
-                <a routerLink="/juegos">Juegos</a>
-            </li>
-            <li>
-                <a routerLink="/quien-soy">Quien soy</a>
-            </li>
-        </ul>
-    </div>
+    <div class="row">
+        <div class="col">
+            <div class="titleHome">
+                <h1>Bienvenidos a la sala de juegos!</h1>
+            </div>
+        </div>
+    </div>  
+    <div class="row">
+        <div class="col">
+            <div class="listHome">
+                <ul>
+                    <li>
+                        <a routerLink="/juegos">Juegos</a>
+                    </li>
+                    <div *ngIf="_authService.isLogged">
+                        <li>
+                            <a routerLink="/encuesta">Encuesta</a>
+                        </li>
+                    </div>                    
+                    <li>
+                        <a routerLink="/quien-soy">Quien soy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>  
+    <div class="row">
+        <div class="col">
+            <app-chat></app-chat>
+        </div>
+    </div>       
 </body>

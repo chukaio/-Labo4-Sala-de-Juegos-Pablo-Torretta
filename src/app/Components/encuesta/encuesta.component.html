@@ -1,0 +1,192 @@
+<form [formGroup]="quizForm" (ngSubmit)="sendQuiz()">
+    <div class="gridContainer">
+        <div class="row">
+            <div class="col">
+                <label class="lblName font" position="floating">Nombre</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="inputName" formControlName="inputName" placeholder="Ingrese nombre..."
+                    required="true">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="lblLastName font" position="floating">Apellido</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="inputLastName" formControlName="inputLastName"
+                    placeholder="Ingrese apellido..." required="true">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="lblAge font" position="floating">Edad</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="inputAge" formControlName="inputAge" placeholder="Ingrese edad..."
+                    required="true">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="lblPhone font" position="floating">Telefono</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="inputPhone" formControlName="inputPhone" placeholder="Ingrese telefono..."
+                    required="true">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="lblFaction font" position="floating">Faccion</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <select class="slcFaction" formControlName="slcFaction">
+                    <option value="" selected>Selecciona una opcion</option>
+                    <option value="autobot">Autobot</option>
+                    <option value="decepticon">Decepticon</option>
+                    <option value="star seeker">Star Seeker</option>
+                    <option value="maximal">Maximal</option>
+                    <option value="predacon">Predacon</option>
+                    <option value="wrecker">Wrecker</option>
+                    <option value="minicon">Minicon</option>
+                    <option value="herald of unicron">Herald of Unicon</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="lblGames font" position="floating">Indique que juego le gusto mas</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="checksContainer" formGroupName="ckbGames">
+                    <input type="checkbox" id="ckbGameA" class="ckbGameA" formControlName="ckbGameA" value="ckbGameA">
+                    <label class="lblGameA">Ahorcado</label>
+                    <input type="checkbox" id="ckbGameB" class="ckbGameB" formControlName="ckbGameB" value="ckbGameB">
+                    <label class="lblGameB">Mayor-Menor</label>
+                    <input type="checkbox" id="ckbGameC" class="ckbGameC" formControlName="ckbGameC" value="ckbGameC">
+                    <label class="lblGameC">Preguntados</label>
+                    <input type="checkbox" id="ckbGameD" class="ckbGameD" formControlName="ckbGameD" value="ckbGameD">
+                    <label class="lblGameD">Adivina quien</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="lblComment font" position="floating">Comentarios sobre que mejorar</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <textarea class="txtComment" placeholder="Escribir comentario..." formControlName="txtComment">
+                </textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="submit" value="" class="btnSend" [disabled]="disableButton()">
+                    Enviar
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="row">
+    <div class="col invalidNameRequired">
+        <small class="invalid"
+            *ngIf="quizForm.controls['inputName'].errors?.['required'] && quizForm.controls['inputName'].touched">
+            El Nombre es requerido
+        </small>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <small class="invalid"
+            *ngIf="quizForm.controls['inputName'].errors?.['pattern'] && quizForm.controls['inputName'].touched">
+            El nombre no puede contener numeros
+        </small>
+    </div>
+</div>
+<div class="row">
+    <div class="col invalidLastNameRequired">
+        <small class="invalid"
+            *ngIf="quizForm.controls['inputLastName'].errors?.['required'] && quizForm.controls['inputLastName'].touched">
+            El apellido es requerido
+        </small>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <small class="invalid"
+            *ngIf="quizForm.controls['inputLastName'].errors?.['pattern'] && quizForm.controls['inputLastName'].touched">
+            El apellido no puede contener numeros
+        </small>
+    </div>
+</div>
+<div class="row">
+    <div class="col invalidAgeRequired">
+        <small class="invalid"
+            *ngIf="quizForm.controls['inputAge'].errors?.['required'] && quizForm.controls['inputAge'].touched">
+            La edad es requerida
+        </small>
+    </div>
+</div>
+<div class="row">
+    <div class="col invalidAgeFormat">
+        <small class="invalid"
+            *ngIf="(quizForm.controls['inputAge'].errors?.['min'] || quizForm.controls['inputAge'].errors?.['max']) && quizForm.controls['inputAge'].touched">
+            La edad tiene que ser entre 18 y 99 años
+        </small>
+    </div>
+</div>
+<div class="row">
+    <div class="col invalidPhoneRequired">
+        <small class="invalid"
+            *ngIf="quizForm.controls['inputPhone'].errors?.['required'] && quizForm.controls['inputPhone'].touched">
+            El telefono es requerido
+        </small>
+    </div>
+</div>
+<div class="row">
+    <div class="col invalidPhoneFormat">
+        <small class="invalid"
+            *ngIf="quizForm.controls['inputPhone'].errors?.['pattern'] && quizForm.controls['inputPhone'].touched">
+            El formato es invalido
+        </small>
+    </div>
+</div>
+<div class="row">
+    <div class="col invalidFactionRequired">
+        <small class="invalid"
+            *ngIf="quizForm.controls['slcFaction'].errors?.['required'] && quizForm.controls['slcFaction'].touched">
+            La faccion es requerida
+        </small>
+    </div>
+</div>
+<div class="row">
+    <div class="col invalidGamesRequired">
+        <small class="invalid" *ngIf="allUnchecked && !firstTime">
+            Debe elegir al menos uno
+        </small>
+    </div>
+</div>
+<div class="row">
+    <div class="col invalidCommentRequired">
+        <small class="invalid"
+            *ngIf="quizForm.controls['txtComment'].errors?.['required'] && quizForm.controls['txtComment'].touched">
+            El comentario es requerido
+        </small>
+    </div>
+</div>

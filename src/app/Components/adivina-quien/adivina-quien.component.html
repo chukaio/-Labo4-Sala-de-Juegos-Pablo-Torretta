@@ -1,0 +1,64 @@
+<div *ngIf="!gameOver then thenGrid else elseGrid">
+</div>
+<ng-template #thenGrid>
+    <div class="gridContainer">
+        <div class="row">
+            <div class="col">
+                <!-- puntaje -->
+                <label class="lblScore font" position="floating">Puntaje: {{Score}}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <!-- Img -->
+                <img class="imgTf" src={{imgTf}} [ngClass]="(countHint==1)? 'imgFirstHint' : ''">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <!-- pregunta -->
+                <label class="lblQuestion font" position="floating">Adivina el transformer</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <!-- input  -->
+                <input type="text" class="inputAnswer" [(ngModel)]="inputAnswer" placeholder="Ingrese respuesta...">
+            </div>
+            <div class="col">
+                <!-- Button Send  -->
+                <button type="button" class="btnSend " (click)="guessTf()" *ngIf="!gameOver">
+                    Enviar
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <!-- Icon Hint -->
+                <button type="button" class="btnShowHint" [disabled]="disableIconHint" (click)="showHint()">
+                    <img class="iconHint" src="assets/Games/Guess-Who/Hint.png">                
+                </button>                
+            </div>
+            <div class="col">
+                <!-- Text Hint -->
+                <label class="inputHint" position="floating" *ngIf="showTextHint">{{inputHint}}</label>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<ng-template #elseGrid>
+    <div class="gridContainerLost">
+        <div class="row">
+            <div class="col">
+                <label class="lblLost font" position="floating">Perdiste</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btnReset" (click)="resetGame(true)">
+                    <img class="imgReset" src="assets/Games/Guess-Who/Reset.png">
+                </button>
+            </div>
+        </div>
+    </div>
+</ng-template>

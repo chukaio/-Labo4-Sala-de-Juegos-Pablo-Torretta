@@ -1,0 +1,106 @@
+.gridContainer {
+    border: solid rgb(0, 0, 0);
+    width: 450px;
+    height: 600px;
+    margin-top: 20%;
+    margin-left: 0px;
+    background-color: aqua;
+    opacity: 0.6;
+}
+
+.font {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 1px 0 0 rgb(0, 0, 0), -1px 0 0 rgb(0, 0, 0), 0 1px 0 rgb(0, 0, 0), 0 -1px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
+}
+
+.lblScore {
+    font-size: 25px;
+    color: blueviolet;
+    margin-left: 2%;
+}
+
+.imgFlag {
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-bottom: 5%;
+    width: 300px;
+}
+
+.optionsContainer {
+    border: solid rgb(0, 0, 0);
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+}
+
+.lblQuestion {
+    font-size: 20px;
+    color: yellow;
+    margin-bottom: 5%;
+    margin-left: 25%;
+}
+
+.btnOption1 {
+    background-color: rgb(161, 161, 161);
+    width: 150px;
+    height: 80px;
+    margin-left: 8%;
+    margin-bottom: 8%;
+    font-weight: bold;
+    text-shadow: 1px 0 0 rgb(255, 255, 255), -1px 0 0 rgb(255, 255, 255), 0 1px 0 rgb(255, 255, 255), 0 -1px 0 rgb(255, 255, 255), 1px 1px rgb(255, 255, 255), -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255);
+}
+
+.btnOption2 {
+    background-color: rgb(255, 2, 2);
+    width: 150px;
+    height: 80px;  
+    margin-bottom: 8%;  
+    font-weight: bold;
+    text-shadow: 1px 0 0 rgb(255, 255, 255), -1px 0 0 rgb(255, 255, 255), 0 1px 0 rgb(255, 255, 255), 0 -1px 0 rgb(255, 255, 255), 1px 1px rgb(255, 255, 255), -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255);
+}
+
+.btnOption3 {
+    background-color: rgb(0, 30, 197);
+    width: 150px;
+    height: 80px;
+    margin-left: 8%;
+    margin-bottom: 8%;
+    font-weight: bold;
+    text-shadow: 1px 0 0 rgb(255, 255, 255), -1px 0 0 rgb(255, 255, 255), 0 1px 0 rgb(255, 255, 255), 0 -1px 0 rgb(255, 255, 255), 1px 1px rgb(255, 255, 255), -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255);
+}
+
+.btnOption4 {
+    background-color: rgb(156, 0, 204);
+    width: 150px;
+    height: 80px;
+    font-weight: bold;
+    text-shadow: 1px 0 0 rgb(255, 255, 255), -1px 0 0 rgb(255, 255, 255), 0 1px 0 rgb(255, 255, 255), 0 -1px 0 rgb(255, 255, 255), 1px 1px rgb(255, 255, 255), -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255);
+}
+
+.gridContainerLost{
+    border: solid rgb(0, 0, 0);
+    width: 200px;
+    height: 200px;
+    margin-top: 20%;
+    margin-left: 0px;
+    background-color: aqua;
+    opacity: 0.6;
+}
+
+.lblLost{
+    font-size: 25px;
+    color: blueviolet;
+    margin-left: 17%;
+}
+
+.btnReset{
+    background-color: transparent;
+    border: none;
+    margin-left: 20%;
+    margin-top: 20%;
+}
+
+.imgReset{
+    width: 100px;
+}

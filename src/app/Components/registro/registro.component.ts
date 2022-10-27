@@ -10,20 +10,24 @@ import { AuthenticationService } from 'src/app/Services/Authentication/authentic
 export class RegistroComponent implements OnInit {
   private email: string;
   private password: string;
+  public emailRegistration: string;
+  public passwordRegistration: string;
 
   constructor(
     private _authService: AuthenticationService,
     private _toastr: ToastrService) {
     this.email = "";
     this.password = "";
+    this.emailRegistration = "";
+    this.passwordRegistration = "";
   }
 
   ngOnInit(): void {
   }
 
   signUp(): void {
-    this.email = (<HTMLInputElement>document.getElementById("emailRegistration")).value;
-    this.password = (<HTMLInputElement>document.getElementById("passwordRegistration")).value;
+    this.email = this.emailRegistration;
+    this.password = this.passwordRegistration;
 
     if (this.email !== "" && this.password !== "") {
       this._authService.signUp(this.email, this.password).then(() => { }).catch(() => { });
@@ -39,16 +43,16 @@ export class RegistroComponent implements OnInit {
   enterCredentials(userType: number) {
     switch (userType) {
       case 1:
-        (<HTMLInputElement>document.getElementById("emailRegistration")).value = "user1@mail.com";
-        (<HTMLInputElement>document.getElementById("passwordRegistration")).value = "user01";
+        this.emailRegistration = "optimus@autobots.com";
+        this.passwordRegistration = "optimus";
         break;
       case 2:
-        (<HTMLInputElement>document.getElementById("emailRegistration")).value = "user2@mail.com";
-        (<HTMLInputElement>document.getElementById("passwordRegistration")).value = "user02";
+        this.emailRegistration = "megatron@decepticons.com";
+        this.passwordRegistration = "megatron";
         break;
       case 3:
-        (<HTMLInputElement>document.getElementById("emailRegistration")).value = "user3@mail.com";
-        (<HTMLInputElement>document.getElementById("passwordRegistration")).value = "user03";
+        this.emailRegistration = "thundertron@starseekers.com";
+        this.passwordRegistration = "thundertron";
         break;
       default:
         break;

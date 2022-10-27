@@ -16,6 +16,21 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ChatComponent } from './Components/chat/chat.component';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AhorcadoComponent } from './Components/ahorcado/ahorcado.component';
+import { PreguntadosComponent } from './Components/preguntados/preguntados.component';
+import { MayorMenorComponent } from './Components/mayor-menor/mayor-menor.component';
+import { AdivinaQuienComponent } from './Components/adivina-quien/adivina-quien.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HighScoreComponent } from './Components/high-score/high-score.component';
+import { DatePipe } from './Pipes/Date/date.pipe';
+import { ScorePipe } from './Pipes/Score/score.pipe';
+import { EncuestaComponent } from './Components/encuesta/encuesta.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,10 +40,23 @@ import { ToastrModule } from 'ngx-toastr';
     MenuComponent,
     RegistroComponent,
     JuegosComponent,
+    ChatComponent,
+    AhorcadoComponent,
+    PreguntadosComponent,
+    MayorMenorComponent,
+    AdivinaQuienComponent,
+    HighScoreComponent,
+    DatePipe,
+    ScorePipe,
+    EncuestaComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
@@ -37,6 +65,8 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot({
       timeOut: 1500
     }),
+    provideDatabase(() => getDatabase()),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

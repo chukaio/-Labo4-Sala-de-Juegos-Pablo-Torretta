@@ -1,0 +1,70 @@
+<div *ngIf="!gameOver then thenGrid else elseGrid">
+</div>
+<ng-template #thenGrid>
+    <div class="gridContainer">
+        <div class="row">
+            <div class="col">
+                <!-- puntaje -->
+                <label class="lblScore font" position="floating">Puntaje: {{Score}}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <!-- bandera de API -->
+                <img class="imgFlag" id="imgFlag" src={{imgFlag}}>
+            </div>
+        </div>
+        <div class="optionsContainer">
+            <div class="row">
+                <div class="col">
+                    <!-- pregunta -->
+                    <label class="lblQuestion font" position="floating">Adivina el pais</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <!-- Opcion 1  -->
+                    <button type="button" class="btnOption1 " (click)="guessFlag(1)" *ngIf="!gameOver">
+                        {{option1}}
+                    </button>
+                </div>
+                <div class="col">
+                    <!-- Opcion 2 -->
+                    <button type="button" class="btnOption2 " (click)="guessFlag(2)" *ngIf="!gameOver">
+                        {{option2}}
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <!-- Opcion 3 -->
+                    <button type="button" class="btnOption3 " (click)="guessFlag(3)" *ngIf="!gameOver">
+                        {{option3}}
+                    </button>
+                </div>
+                <div class="col">
+                    <!-- Opcion 4 -->
+                    <button type="button" class="btnOption4 " (click)="guessFlag(4)" *ngIf="!gameOver">
+                        {{option4}}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<ng-template #elseGrid>
+    <div class="gridContainerLost">
+        <div class="row">
+            <div class="col">
+                <label class="lblLost font" position="floating">Perdiste</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btnReset" (click)="resetGame()">
+                    <img class="imgReset" src="assets/Games/Asked/Reset.png">
+                </button>
+            </div>
+        </div>
+    </div>
+</ng-template>
