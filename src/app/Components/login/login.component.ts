@@ -43,22 +43,20 @@ export class LoginComponent {
   enterCredentials(userType: number) {
     switch (userType) {
       case 1:
-        // (<HTMLInputElement>document.getElementById("emailLogin")).value = "optimus@autobots.com";
-        // (<HTMLInputElement>document.getElementById("passwordLogin")).value = "optimus";
         this.emailLogin = "optimus@autobots.com";
         this.passwordLogin = "optimus";
         break;
       case 2:
-        // (<HTMLInputElement>document.getElementById("emailLogin")).value = "megatron@decepticons.com";
-        // (<HTMLInputElement>document.getElementById("passwordLogin")).value = "megatron";
         this.emailLogin = "megatron@decepticons.com";
         this.passwordLogin = "megatron";
         break;
       case 3:
-        // (<HTMLInputElement>document.getElementById("emailLogin")).value = "thundertron@starseeker.com";
-        // (<HTMLInputElement>document.getElementById("passwordLogin")).value = "thundertron";
         this.emailLogin = "thundertron@starseekers.com";
         this.passwordLogin = "thundertron";
+        break;
+      case 4:
+        this.emailLogin = "quintessons@admin.com";
+        this.passwordLogin = "quintessons";
         break;
       default:
         break;

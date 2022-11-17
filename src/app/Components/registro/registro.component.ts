@@ -54,6 +54,10 @@ export class RegistroComponent implements OnInit {
         this.emailRegistration = "thundertron@starseekers.com";
         this.passwordRegistration = "thundertron";
         break;
+      case 4:
+        this.emailRegistration = "quintessons@admin.com";
+        this.passwordRegistration = "quintessons";
+        break;
       default:
         break;
     }

@@ -25,7 +25,12 @@
                         <li>
                             <a routerLink="/encuesta">Encuesta</a>
                         </li>
-                    </div>                    
+                    </div>  
+                    <div *ngIf="_authService.isLogged && _authService.isAdmin">
+                        <li>
+                            <a routerLink="/resultados-encuesta">Resultados de encuesta</a>
+                        </li>
+                    </div>                   
                     <li>
                         <a routerLink="/quien-soy">Quien soy</a>
                     </li>

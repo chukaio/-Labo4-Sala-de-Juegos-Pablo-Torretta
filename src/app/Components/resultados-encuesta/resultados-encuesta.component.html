@@ -1,0 +1,35 @@
+<div class="table-responsive">
+    <table class="table table-striped table-sm resultados">
+        <thead>
+            <tr>
+                <th scope="col">Usuario</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Faccion</th>
+                <th scope="col">Juegos preferidos</th>
+                <th scope="col">Comentarios</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let quiz of quizzes">
+                <td>{{quiz.name}} {{quiz.lastName}}</td>
+                <td>{{quiz.age}}</td>
+                <td>{{quiz.faction}}</td>                
+                <select class="inputSpecialty input">
+                    <option *ngIf="quiz.game_Asked" value="preguntados">
+                        Preguntados
+                    </option>
+                    <option *ngIf="quiz.game_GuessWho" value="adivinaQuien">
+                        Adivina Quien
+                    </option>
+                    <option *ngIf="quiz.game_HangedUp" value="ahorcado">
+                        Ahorcado
+                    </option>
+                    <option *ngIf="quiz.game_HigherLower" value="mayorMenor">
+                        Mayor-Menor
+                    </option>
+                </select>
+                <td>{{quiz.comments}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

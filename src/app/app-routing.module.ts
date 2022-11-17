@@ -10,6 +10,8 @@ import { MayorMenorComponent } from './Components/mayor-menor/mayor-menor.compon
 import { PreguntadosComponent } from './Components/preguntados/preguntados.component';
 import { QuienSoyComponent } from './Components/quien-soy/quien-soy.component';
 import { RegistroComponent } from './Components/registro/registro.component';
+import { ResultadosEncuestaComponent } from './Components/resultados-encuesta/resultados-encuesta.component';
+import { ResultadoEncuestaActivateGuard } from './Guard/resultadoEncuestaActivate/resultado-encuesta-activate.guard';
 
 const routes: Routes = [
   {
@@ -31,25 +33,7 @@ const routes: Routes = [
   {
     path: "registro",
     component: RegistroComponent
-  },
-  // {
-  //   path: "juegos",
-  //   component: JuegosComponent,
-  //   children: [{
-  //     path: "juegos/ahorcado",
-  //     component: AhorcadoComponent
-  //   }, {
-  //     path: "mayor-menor",
-  //     component: MayorMenorComponent
-  //   }, {
-  //     path: "preguntados",
-  //     component: PreguntadosComponent
-  //   }, {
-  //     path: "adivina-quien",
-  //     component: AdivinaQuienComponent
-  //   }
-  //   ]
-  // },
+  },  
   {
     path: "juegos",
     component: JuegosComponent
@@ -68,10 +52,15 @@ const routes: Routes = [
     component: AdivinaQuienComponent
   },
   {
+    path: "resultados-encuesta",
+    component: ResultadosEncuestaComponent,
+    canActivate: [ResultadoEncuestaActivateGuard]
+  },
+  {
     path: "",
     redirectTo: "/home",
     pathMatch: "full"
-  },];
+  }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

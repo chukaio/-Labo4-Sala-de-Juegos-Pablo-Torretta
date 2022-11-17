@@ -22,6 +22,7 @@ export class AdivinaQuienComponent implements OnInit {
   private correctAnswer: string;
   private scoring: HighScore;
   private dateToday: string;
+  private imgName: number;
 
   constructor(
     private toaster: ToastrService,
@@ -47,6 +48,7 @@ export class AdivinaQuienComponent implements OnInit {
         this.Score = 0;
       }
     });
+    this.imgName = 0;
   }
 
   ngOnInit(): void {
@@ -54,11 +56,11 @@ export class AdivinaQuienComponent implements OnInit {
   }
 
   setupGame() {
-    var imgName = Math.floor(Math.random() * 4);
-    imgName++;
+    this.imgName = Math.floor(Math.random() * 4);
+    this.imgName++;
 
-    this.imgTf = "assets/Games/Guess-Who/" + imgName + ".png";
-    switch (imgName) {
+    this.imgTf = "assets/Games/Guess-Who/" + this.imgName + ".png";
+    switch (this.imgName) {
       case 1:
         this.correctAnswer = "megatron";
         break;
@@ -98,9 +100,9 @@ export class AdivinaQuienComponent implements OnInit {
   }
 
   resetGame(hardReset: boolean) {
-    if(hardReset){
-      this.Score=0
-    }    
+    if (hardReset) {
+      this.Score = 0
+    }
     this.countHint = 0;
     this.showTextHint = false;
     this.gameOver = false;
@@ -112,6 +114,26 @@ export class AdivinaQuienComponent implements OnInit {
 
   showHint() {
     this.countHint++;
+    if (this.countHint == 1) {
+      switch (this.imgName) {
+        case 1:
+          this.imgName=12;
+          break;
+        case 2:
+          this.imgName=22;
+          break;
+        case 3:
+          this.imgName=32;
+          break;
+        case 4:
+          this.imgName=42;
+          break;
+        default:
+          break;
+      }
+      this.imgTf = "assets/Games/Guess-Who/" + this.imgName + ".png";
+    }
+
     if (this.countHint == 2) {
       this.showTextHint = true;
       this.disableIconHint = true;

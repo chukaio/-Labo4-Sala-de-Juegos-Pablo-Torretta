@@ -30,6 +30,7 @@ import { HighScoreComponent } from './Components/high-score/high-score.component
 import { DatePipe } from './Pipes/Date/date.pipe';
 import { ScorePipe } from './Pipes/Score/score.pipe';
 import { EncuestaComponent } from './Components/encuesta/encuesta.component';
+import { ResultadosEncuestaComponent } from './Components/resultados-encuesta/resultados-encuesta.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { EncuestaComponent } from './Components/encuesta/encuesta.component';
     DatePipe,
     ScorePipe,
     EncuestaComponent,
+    ResultadosEncuestaComponent,
   ],
   imports: [
     HttpClientModule,

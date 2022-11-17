@@ -19,6 +19,7 @@ export class AuthenticationService {
   public openChat: boolean;
   private isLogged$: Subject<boolean>;
   public user: string;
+  public isAdmin: boolean;
 
   constructor(
     private catchErrorFB: FirebaseCatchErrorService,
@@ -29,6 +30,7 @@ export class AuthenticationService {
     this.openChat = false;
     this.isLogged$ = new Subject();
     this.user = "";
+    this.isAdmin = false;
   }
 
   getIsLogged() {
@@ -41,6 +43,9 @@ export class AuthenticationService {
     return signInWithEmailAndPassword(auth, email, password).then((userCredentials: any) => {
       const user = userCredentials.user;
       if (user) {
+        if (user.email == "quintessons@admin.com") {
+          this.isAdmin = true;
+        }
         this.isLogged = true;
         this.user = user.email;
         this.isLogged$.next(this.isLogged);
@@ -57,6 +62,7 @@ export class AuthenticationService {
   signOut() {
     this.isLogged = false;
     this.openChat = false;
+    this.isAdmin = false;
     this.user = "";
     this.isLogged$.next(this.isLogged);
 
@@ -67,7 +73,7 @@ export class AuthenticationService {
 
     return createUserWithEmailAndPassword(auth, email, password).then((userCredentials) => {
       const user2 = userCredentials.user;
-      if (user2) {
+      if (user2) {        
         this._toastr.success("Se ha registrado con éxito!");
         this._router.navigate(['home']);
       } else {

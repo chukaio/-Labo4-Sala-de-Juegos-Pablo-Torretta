@@ -91,6 +91,13 @@
     font-weight: bold;
 }
 
+.btnUser4 {
+    background: #000000;
+    color: #33ff00;
+    font-weight: bold; 
+    border: solid rgb(185, 185, 185);   
+}
+
 .input {
     background:#FFF;
     font-weight: bold;    
